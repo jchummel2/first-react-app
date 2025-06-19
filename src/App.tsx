@@ -1,14 +1,17 @@
 import React from 'react';
+import NavBar from './NavBar';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <NavBar />
       <header className="App-header">
+        <h1>Welcome to my first web app</h1>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Totally not a copy of the React logo, but a placeholder image.
         </p>
         <a
           className="App-link"
