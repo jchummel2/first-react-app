@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <header className="App-header">
+      <header className="App-header fade-in-up">
         <h1>Welcome to my first web app</h1>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
