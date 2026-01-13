@@ -1,3 +1,5 @@
+/* ===== RESET / BASE ===== */
+
 body {
   margin: 0;
   font-family: "Georgia", "Times New Roman", serif;
@@ -11,7 +13,7 @@ body {
   flex-direction: column;
 }
 
-/* Header */
+/* ===== HEADER / FLORAL ===== */
 
 .site-header {
   text-align: center;
@@ -24,10 +26,48 @@ body {
 }
 
 .floral-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: bottom;
   display: block;
-  max-width: 100%;
-  margin: 0 auto;
 }
+
+/* Joel & Leah hero photo */
+
+.joel-leah-1-wrap {
+  max-width: 880px;       /* match main content width */
+  margin: 2rem auto;      /* center horizontally with top/bottom space */
+}
+
+.joel-leah-1-img {
+  display: block;
+  width: 100%;            /* fill the wrapper */
+  max-width: 100%;
+  height: 270px;          /* banner height – adjust to taste */
+  object-fit: cover;      /* crop image instead of stretching */
+  object-position: center;/* keep you two in the middle */
+  border-radius: 4px;     /* optional */
+}
+
+@media (max-width: 768px) {
+  .joel-leah-1-wrap {
+    max-width: 95%;
+  }
+
+  .joel-leah-1-img {
+    height: 200px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .floral-img {
+    height: 140px;
+  }
+}
+
+/* ===== HEADER TEXT ===== */
 
 .header-text {
   margin-top: 1.5rem;
@@ -48,7 +88,11 @@ body {
   color: #6b7a8c;
 }
 
-/* Nav */
+.header-subline.days {
+  margin-top: 0.4rem;
+}
+
+/* ===== NAV ===== */
 
 .main-nav {
   margin-top: 1.5rem;
@@ -80,40 +124,29 @@ body {
   bottom: -0.3rem;
 }
 
-/* Pages */
+/* ===== PAGE WRAPPER ===== */
 
 .page {
-  max-width: 760px;
+  max-width: 880px;
   margin: 0 auto;
   padding: 2.5rem 1rem 3.5rem;
 }
 
+/* Page title shared by multiple pages */
 .page-title {
-  font-size: 1.8rem;
   text-align: center;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  margin-bottom: 0.75rem;
 }
 
-.page-intro {
-  text-align: center;
-  color: #64748b;
-  margin-bottom: 2rem;
-}
-
-/* Home layout */
-
-.home-page {
-  text-align: center;
-}
+/* ===== HOME: DATE / LOCATION ===== */
 
 .home-date-location {
   display: flex;
   justify-content: center;
   align-items: stretch;
   gap: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .home-column {
@@ -122,7 +155,7 @@ body {
 
 .home-label {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #6b7a8c;
@@ -130,17 +163,12 @@ body {
 
 .home-value {
   margin: 0.35rem 0 0;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
-.home-divider {
-  width: 1px;
-  background: #e3e6ee;
-}
-
-/* Schedule */
+/* ===== HOME: WEDDING DAY ===== */
 
 .home-schedule {
   margin-top: 1rem;
@@ -152,6 +180,7 @@ body {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   margin-bottom: 0.3rem;
+  text-align: center;
 }
 
 .schedule-date {
@@ -160,53 +189,55 @@ body {
   text-transform: uppercase;
   color: #6b7a8c;
   margin-bottom: 1.75rem;
+  text-align: center;
 }
 
-.schedule-list {
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   border-top: 1px solid #e3e6ee;
   border-bottom: 1px solid #e3e6ee;
-}
-
-.schedule-row {
-  display: grid;
-  grid-template-columns: 1.4fr 3fr;
-  gap: 2rem;
   padding: 1.5rem 0;
-  border-bottom: 1px solid #e3e6ee;
 }
 
-.schedule-row:last-child {
-  border-bottom: none;
+.schedule-card {
+  text-align: left;
 }
 
 .schedule-time {
-  font-size: 0.9rem;
-  letter-spacing: 0.16em;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #6b7a8c;
-}
-
-.schedule-details {
-  text-align: left;
+  margin-bottom: 0.35rem;
 }
 
 .schedule-heading {
   font-size: 0.9rem;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  margin-bottom: 0.4rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
 }
 
-.schedule-details p {
+.schedule-card p {
   margin: 0.15rem 0;
   font-size: 0.9rem;
   line-height: 1.7;
 }
 
-/* Monogram */
+@media (max-width: 768px) {
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== HOME: MONOGRAM ===== */
 
 .home-monogram {
   margin-top: 2.5rem;
+  text-align: center;
 }
 
 .monogram-initials {
@@ -226,15 +257,26 @@ body {
   letter-spacing: 0.18em;
 }
 
-/* Generic section & cards */
+/* ===== OUR STORY ===== */
+
+.story-text {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.85;
+  font-size: 0.95rem;
+  color: #4a5667;
+}
+
+/* ===== INFO / REGISTRY CARDS ===== */
 
 .section {
   margin-top: 2rem;
 }
 
 .section h2 {
-  font-size: 1.1rem;
-  letter-spacing: 0.1em;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
@@ -257,18 +299,7 @@ body {
   border-radius: 0.5rem;
 }
 
-.card-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.card-note {
-  margin-top: 0.75rem;
-  font-size: 0.8rem;
-  color: #9aa5b5;
-}
-
-/* Footer */
+/* ===== FOOTER ===== */
 
 .app-footer {
   margin-top: auto;
@@ -277,9 +308,4 @@ body {
   text-align: center;
   color: #9aa5b5;
   border-top: 1px solid #e5e9f0;
-}
-
-.floral-img {
-  width: 100%;
-  height: auto;
 }
