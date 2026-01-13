@@ -1,4 +1,5 @@
 import React from "react";
+import Monogram from "./Monogram";
 
 const OurStory: React.FC = () => {
   return (
@@ -45,6 +46,7 @@ const OurStory: React.FC = () => {
           Adel, Iowa.
         </p>
       </section>
+      <Monogram></Monogram>
     </main>
   );
 };

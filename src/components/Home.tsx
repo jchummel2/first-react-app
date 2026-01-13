@@ -1,5 +1,6 @@
 import React from "react";
 import joelAndLeahImage1 from "../assets/joelAndLeah1.png";
+import Monogram from "./Monogram";
 
 const Home: React.FC = () => {
     return (
@@ -55,14 +56,7 @@ const Home: React.FC = () => {
                     </div>
                 </div>
             </section>
-
-
-            {/* Monogram */}
-            <section className="home-monogram">
-                <div className="monogram-initials">L &amp; J</div>
-                <div className="monogram-line" />
-                <div className="monogram-date">10.24.2026</div>
-            </section>
+            <Monogram></Monogram>
         </main>
     );
 };

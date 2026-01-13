@@ -128,8 +128,7 @@ body {
 
 .page {
   max-width: 880px;
-  margin: 0 auto;
-  padding: 2.5rem 1rem 3.5rem;
+  margin: -2rem auto;
 }
 
 /* Page title shared by multiple pages */
@@ -234,9 +233,9 @@ body {
 }
 
 /* ===== HOME: MONOGRAM ===== */
-
 .home-monogram {
   margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
@@ -256,6 +255,7 @@ body {
   font-size: 0.85rem;
   letter-spacing: 0.18em;
 }
+
 
 /* ===== OUR STORY ===== */
 
@@ -302,7 +302,8 @@ body {
 /* ===== FOOTER ===== */
 
 .app-footer {
-  margin-top: auto;
+  padding-top: 20px;
+  margin-top: 20px;
   padding: 1rem;
   font-size: 0.7rem;
   text-align: center;

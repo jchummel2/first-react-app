@@ -1,4 +1,5 @@
 import React from "react";
+import Monogram from "./Monogram";
 
 type RegistryItem = {
   name: string;
@@ -81,6 +82,7 @@ const Registry: React.FC = () => {
           </section>
         ))}
       </div>
+      <Monogram></Monogram>
     </main>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import Monogram from "./Monogram";
 
 const Info: React.FC = () => {
   return (
@@ -59,6 +60,7 @@ const Info: React.FC = () => {
           for dancing — the dance floor gets real, real fast.
         </p>
       </section>
+      <Monogram></Monogram>
     </main>
   );
 };
