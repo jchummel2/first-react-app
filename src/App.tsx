@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import NavBar from "./NavBar";
-import Home from "./Home";
-import OurStory from "./OurStory";
-import Info from "./Info";
-import Registry from "./Registry";
+import NavBar from "./components/NavBar";
+import Home from "./components/Home";
+import OurStory from "./components/OurStory";
+import Info from "./components/Info";
+import Registry from "./components/Registry";
 
 const App: React.FC = () => {
   return (

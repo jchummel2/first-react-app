@@ -1,5 +1,5 @@
 import React from "react";
-import floral from "./assets/flowers.png";
+import floral from "../assets/flowers.png";
 import { NavLink } from "react-router-dom";
 
 const NavBar: React.FC = () => {
