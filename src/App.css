@@ -1,49 +1,285 @@
+body {
+  margin: 0;
+  font-family: "Georgia", "Times New Roman", serif;
+  background: #ffffff;
+  color: #2f3a4b;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+/* Header */
+
+.site-header {
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.floral-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.floral-img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.header-text {
+  margin-top: 1.5rem;
+}
+
+.couple-name {
+  font-size: 2.4rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.header-subline {
+  margin: 0.35rem 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6b7a8c;
+}
+
+/* Nav */
+
+.main-nav {
+  margin-top: 1.5rem;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1.75rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
-.App-link {
-  color: #61dafb;
+.main-nav a {
+  text-decoration: none;
+  color: #6b7a8c;
+  position: relative;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.nav-link-active {
+  color: #2f3a4b;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-link-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #2f3a4b;
+  bottom: -0.3rem;
+}
+
+/* Pages */
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 3.5rem;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.page-intro {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+/* Home layout */
+
+.home-page {
+  text-align: center;
+}
+
+.home-date-location {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.home-column {
+  text-align: center;
+}
+
+.home-label {
+  margin: 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6b7a8c;
+}
+
+.home-value {
+  margin: 0.35rem 0 0;
+  font-size: 1.4rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.home-divider {
+  width: 1px;
+  background: #e3e6ee;
+}
+
+/* Schedule */
+
+.home-schedule {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.schedule-title {
+  font-size: 1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.schedule-date {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6b7a8c;
+  margin-bottom: 1.75rem;
+}
+
+.schedule-list {
+  border-top: 1px solid #e3e6ee;
+  border-bottom: 1px solid #e3e6ee;
+}
+
+.schedule-row {
+  display: grid;
+  grid-template-columns: 1.4fr 3fr;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e3e6ee;
+}
+
+.schedule-row:last-child {
+  border-bottom: none;
+}
+
+.schedule-time {
+  font-size: 0.9rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #6b7a8c;
+}
+
+.schedule-details {
+  text-align: left;
+}
+
+.schedule-heading {
+  font-size: 0.9rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.schedule-details p {
+  margin: 0.15rem 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* Monogram */
+
+.home-monogram {
+  margin-top: 2.5rem;
+}
+
+.monogram-initials {
+  font-size: 1.6rem;
+  letter-spacing: 0.18em;
+}
+
+.monogram-line {
+  width: 120px;
+  height: 1px;
+  background: #6b7a8c;
+  margin: 0.6rem auto;
+}
+
+.monogram-date {
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+}
+
+/* Generic section & cards */
+
+.section {
+  margin-top: 2rem;
+}
+
+.section h2 {
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.section p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #4a5667;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  border: 1px solid #e2e6ec;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-note {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: #9aa5b5;
+}
+
+/* Footer */
+
+.app-footer {
+  margin-top: auto;
+  padding: 1rem;
+  font-size: 0.7rem;
+  text-align: center;
+  color: #9aa5b5;
+  border-top: 1px solid #e5e9f0;
+}
+
+.floral-img {
+  width: 100%;
+  height: auto;
 }
